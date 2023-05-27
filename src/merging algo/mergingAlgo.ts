@@ -1,5 +1,8 @@
 const mergeSort = (arr: number[], start: number, end: number): void => {
   if (start < end - 1) {
+    // if start = end .. that means that there's only one item in the list.
+    // As long as start is smaller than end, there's more than one item in the list
+    // well, if there's more than one item in the list, find the list mid length and split the list again
     let mid = Math.floor((start + end) / 2);
     mergeSort(arr, mid, end);
     mergeSort(arr, start, mid);
@@ -21,6 +24,8 @@ const merging = (
   let k = start;
 
   while (i < leftArr.length && j < rightArr.length) {
+    // if both of the lists are still not finished or if the loop is not done with both of the lists, then go to if condition
+    // did the items of the left array got compared with all the items in the right array?
     if (leftArr[i] <= rightArr[j]) {
       arr[k] = leftArr[i];
       i++;
@@ -30,11 +35,13 @@ const merging = (
     }
     k++;
   }
+  // Is there any items left in leftArr
   while (i < leftArr.length) {
     arr[k] = leftArr[i];
     i++;
     k++;
   }
+  // Is there any items left in rightArr
   while (j < rightArr.length) {
     arr[k] = rightArr[j];
     j++;
