@@ -1,3 +1,7 @@
+
+
+
+
 const mergeSort = (arr: number[], start: number, end: number): void => {
   if (start < end - 1) {
     // if start = end .. that means that there's only one item in the list.
