@@ -3,7 +3,7 @@
 The loop in the segregate problem takes the two arrays and travers through each one of them sepretally, while in the merging loop it goes through the two arrays as a whole.
 
 # Merging algorthim
-`
+```
 const leftArr = arr.slice(start, mid);
   const rightArr = arr.slice(mid, end);
 
@@ -21,11 +21,11 @@ const leftArr = arr.slice(start, mid);
     }
     k++;
   }
-`
+```
 The idea is to compare the numbers with each other and sort them based on which one is bigger and which one is smaller.
 
 # Segregate
-`
+```
 const arr_left = arr.slice(low, midPoint);
   const arr_right = arr.slice(midPoint, high);
 
@@ -46,5 +46,5 @@ const arr_left = arr.slice(low, midPoint);
     j++;
     k++;
   }
-`
+```
 The idea here is to check each array which its numbers are smaller than zero or not.
